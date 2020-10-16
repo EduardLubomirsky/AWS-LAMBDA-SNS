@@ -1,0 +1,17 @@
+{
+  "name": "aws-simple-notification",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "zip -r lambda.zip .",
+    "publish": "aws lambda update-function-code --function-name notifier \\--zip-file fileb://./lambda.zip --profile eduard",
+    "logs": "aws lambda invoke --function-name notifier out --log-type Tail --profile eduard"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.771.0"
+  }
+}

@@ -28,5 +28,8 @@ exports.handler = async (event) => {
                 messageId,
             }
         ),
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+        },
     };
 }

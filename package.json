@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "zip -r lambda.zip .",
-    "publish": "aws lambda update-function-code --function-name notifier \\--zip-file fileb://./lambda.zip --profile eduard",
+    "publish": "aws lambda update-function-code --function-name notifier \\--zip-file fileb://./lambda.zip --profile eduard --cli-connect-timeout 6000",
     "logs": "aws lambda invoke --function-name notifier out --log-type Tail --profile eduard"
   },
   "author": "",
